@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <title>Notes Application</title>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+                <link rel="stylesheet" href="style.css">
+        </head>
+	<body>
+                <div class="container">
+                        <div class="row">
+                                <h2 class="col-lg-12 text-center">Notes Application</h2>
+                                <div class="col-lg-12 text-center">
+                                        <button type="button" class="btn btn-primary" id="addNoteButton">New note</button>                                      
+                                </div>
+                                <div class="col-lg-12">
+                                        <div class="notesPanel row">
+                                        </div>
+                                </div>
+                        </div>
+                        
+                </div>
+                <div class="modal fade" id="noteModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                        <div class="modal-header">
+                                                <h5 class="modal-title" id="noteModalHeader">Modal title</h5>
+                                                <button type="button" class="close resetNoteForm" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                
+                                        </div>
+                                        <div class="modal-body">
+                                                <form id="noteForm">
+                                                        <div class="form-group row">
+                                                                <label for="noteTitle" class="col-sm-2 col-form-label">Title</label>
+                                                                <div class="col-sm-10">
+                                                                        <input type="text" class="form-control" name="noteTitle" id="inputNoteTitle">
+                                                                </div>
+                                                        </div>
+                                                        <div class="form-group row">
+                                                                <label for="noteText" class="col-sm-2 col-form-label">Text</label>
+                                                                <div class="col-sm-10">
+                                                                        <textarea class="form-control" name="noteText" id="inputNoteText" rows="5"></textarea>                                                                       
+                                                                </div>
+                                                        </div>
+                                                </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary resetNoteForm" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Confirmation</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                    Delete the note?
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary" id="confirmDeleteButton">Delete</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>           
+                <script src="script.js"></script>
+        </body>
+</html>
